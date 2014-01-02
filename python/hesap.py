@@ -7,24 +7,24 @@ while True:
 	
 	i1 = raw_input("işlem numarası")
 	if i1 == "1":
-		a = int(raw_input("ilk sayı"))
+		a = float(raw_input("ilk sayı"))
 		print a
-		b = int(raw_input("ikinci sayı"))
+		b = float(raw_input("ikinci sayı"))
 		print a, "+", b, "=", a + b
 	if i1 == "2":
-		a = int(raw_input("ilk sayı"))
+		a = float(raw_input("ilk sayı"))
 		print a
-		b = int(raw_input("ikinci sayı"))
+		b = float(raw_input("ikinci sayı"))
 		print a, "-", b, "=", a - b
 	if i1 == "3":
-		a = int(raw_input("ilk sayı"))
+		a = float(raw_input("ilk sayı"))
 		print a
-		b = int(raw_input("ikinci sayı"))
+		b = float(raw_input("ikinci sayı"))
 		print a, "*", b, "=", a * b
 	if i1 == "4":
-		a = int(raw_input("ilk sayı"))
+		a = float(raw_input("ilk sayı"))
 		print a
-		b = int(raw_input("ikinci sayı"))
+		b = float(raw_input("ikinci sayı"))
 		print a, "/", b, "=", a / b
 	else:
 		print "yanlış işlem numarası"
