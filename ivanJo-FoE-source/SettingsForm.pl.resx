@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 18</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Skanuj co X (min):</value>
+  </data>
+  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 16</value>
+  </data>
+  <data name="checkBoxSupply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 17</value>
+  </data>
+  <data name="checkBoxSupply.Text" xml:space="preserve">
+    <value>Automatyczne rozpoczęcie produkcji</value>
+  </data>
+  <data name="numericUpDown_WaitBeforeProduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 39</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 41</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Czekaj zanim zeskanuje produkcje (sek):</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 63</value>
+  </data>
+  <data name="buttonClose.Text" xml:space="preserve">
+    <value>&amp;Anuluj</value>
+  </data>
+  <data name="buttonSave.Text" xml:space="preserve">
+    <value>&amp;Zapisz</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Zaawansowane</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 60</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 13</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Zatrzymaj na X sek jeśli jest ingeręcja gracza:</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 38</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 13</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Widok Wysokości Screenu Bota:</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Widok Długości Screenu Bota:</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 105</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 128</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 82</value>
+  </data>
+  <data name="checkBoxSaveScanResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 17</value>
+  </data>
+  <data name="checkBoxSaveScanResults.Text" xml:space="preserve">
+    <value>Zapisz rezultat skanowania do pliku</value>
+  </data>
+  <data name="checkBoxMilitary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 17</value>
+  </data>
+  <data name="checkBoxMilitary.Text" xml:space="preserve">
+    <value>Automatycznie produkuj zmarłe jednostki</value>
+  </data>
+  <data name="checkBoxPlungedItemsClick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 17</value>
+  </data>
+  <data name="checkBoxPlungedItemsClick.Text" xml:space="preserve">
+    <value>Klikaj zepsute i splądrowane budynki</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Opcje ochrony</value>
+  </data>
+  <data name="numericUpDown_PrcRndClick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 61</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 63</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 13</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value> Losowo zbieraj max domków (%):</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 41</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Losowo wydłużaj czas skanowania o X minut (%):</value>
+  </data>
+  <data name="numericUpDown_MaxItemsClicked.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 18</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 13</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Maksymalnie klikaj domki po kolei:</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 67</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 151</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Skanowanie</value>
+  </data>
+  <data name="checkBoxGoods.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 17</value>
+  </data>
+  <data name="checkBoxGoods.Text" xml:space="preserve">
+    <value>Automatycznie produkuj materiały</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Typ materiałów</value>
+  </data>
+  <data name="btnResetWindowPositions.Text" xml:space="preserve">
+    <value>Reset pozycji okna</value>
+  </data>
+  <data name="checkBoxShowLogOnStartup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 17</value>
+  </data>
+  <data name="checkBoxShowLogOnStartup.Text" xml:space="preserve">
+    <value>Pokaż okno logów przy starcie</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 86</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Opcje gry</value>
+  </data>
+  <data name="numericUpDownAutoRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 41</value>
+  </data>
+  <data name="numericUpDownAutoLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 18</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 44</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 13</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Odświerzaj co X minut (0 - wyłączone):</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 12</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 26</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Auto-login gdy okno gry jest
+nierozpoznawalne przez X razy (0 - nigdy):</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Domyślny serwer FoE:</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, -1</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>546, 62</value>
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB8
+        DQAAAk1TRnQBSQFMAgEBCAEAAYQBAAGEAQABHQEAARIBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABdAMAATYDAAEBAQABCAUAAXgBGBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
+        AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
+        AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
+        AwABZgMAAZkDAAHMAgABMwMAAjMCAAEzAWYCAAEzAZkCAAEzAcwCAAEzAf8CAAFmAwABZgEzAgACZgIA
+        AWYBmQIAAWYBzAIAAWYB/wIAAZkDAAGZATMCAAGZAWYCAAKZAgABmQHMAgABmQH/AgABzAMAAcwBMwIA
+        AcwBZgIAAcwBmQIAAswCAAHMAf8CAAH/AWYCAAH/AZkCAAH/AcwBAAEzAf8CAAH/AQABMwEAATMBAAFm
+        AQABMwEAAZkBAAEzAQABzAEAATMBAAH/AQAB/wEzAgADMwEAAjMBZgEAAjMBmQEAAjMBzAEAAjMB/wEA
+        ATMBZgIAATMBZgEzAQABMwJmAQABMwFmAZkBAAEzAWYBzAEAATMBZgH/AQABMwGZAgABMwGZATMBAAEz
+        AZkBZgEAATMCmQEAATMBmQHMAQABMwGZAf8BAAEzAcwCAAEzAcwBMwEAATMBzAFmAQABMwHMAZkBAAEz
+        AswBAAEzAcwB/wEAATMB/wEzAQABMwH/AWYBAAEzAf8BmQEAATMB/wHMAQABMwL/AQABZgMAAWYBAAEz
+        AQABZgEAAWYBAAFmAQABmQEAAWYBAAHMAQABZgEAAf8BAAFmATMCAAFmAjMBAAFmATMBZgEAAWYBMwGZ
+        AQABZgEzAcwBAAFmATMB/wEAAmYCAAJmATMBAANmAQACZgGZAQACZgHMAQABZgGZAgABZgGZATMBAAFm
+        AZkBZgEAAWYCmQEAAWYBmQHMAQABZgGZAf8BAAFmAcwCAAFmAcwBMwEAAWYBzAGZAQABZgLMAQABZgHM
+        Af8BAAFmAf8CAAFmAf8BMwEAAWYB/wGZAQABZgH/AcwBAAHMAQAB/wEAAf8BAAHMAQACmQIAAZkBMwGZ
+        AQABmQEAAZkBAAGZAQABzAEAAZkDAAGZAjMBAAGZAQABZgEAAZkBMwHMAQABmQEAAf8BAAGZAWYCAAGZ
+        AWYBMwEAAZkBMwFmAQABmQFmAZkBAAGZAWYBzAEAAZkBMwH/AQACmQEzAQACmQFmAQADmQEAApkBzAEA
+        ApkB/wEAAZkBzAIAAZkBzAEzAQABZgHMAWYBAAGZAcwBmQEAAZkCzAEAAZkBzAH/AQABmQH/AgABmQH/
+        ATMBAAGZAcwBZgEAAZkB/wGZAQABmQH/AcwBAAGZAv8BAAHMAwABmQEAATMBAAHMAQABZgEAAcwBAAGZ
+        AQABzAEAAcwBAAGZATMCAAHMAjMBAAHMATMBZgEAAcwBMwGZAQABzAEzAcwBAAHMATMB/wEAAcwBZgIA
+        AcwBZgEzAQABmQJmAQABzAFmAZkBAAHMAWYBzAEAAZkBZgH/AQABzAGZAgABzAGZATMBAAHMAZkBZgEA
+        AcwCmQEAAcwBmQHMAQABzAGZAf8BAALMAgACzAEzAQACzAFmAQACzAGZAQADzAEAAswB/wEAAcwB/wIA
+        AcwB/wEzAQABmQH/AWYBAAHMAf8BmQEAAcwB/wHMAQABzAL/AQABzAEAATMBAAH/AQABZgEAAf8BAAGZ
+        AQABzAEzAgAB/wIzAQAB/wEzAWYBAAH/ATMBmQEAAf8BMwHMAQAB/wEzAf8BAAH/AWYCAAH/AWYBMwEA
+        AcwCZgEAAf8BZgGZAQAB/wFmAcwBAAHMAWYB/wEAAf8BmQIAAf8BmQEzAQAB/wGZAWYBAAH/ApkBAAH/
+        AZkBzAEAAf8BmQH/AQAB/wHMAgAB/wHMATMBAAH/AcwBZgEAAf8BzAGZAQAB/wLMAQAB/wHMAf8BAAL/
+        ATMBAAHMAf8BZgEAAv8BmQEAAv8BzAEAAmYB/wEAAWYB/wFmAQABZgL/AQAB/wJmAQAB/wFmAf8BAAL/
+        AWYBAAEhAQABpQEAA18BAAN3AQADhgEAA5YBAAPLAQADsgEAA9cBAAPdAQAD4wEAA+oBAAPxAQAD+AEA
+        AfAB+wH/AQABpAKgAQADgAMAAf8CAAH/AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP//wD/AP8A/wD/AP8A
+        /wD/ADEAdQsETwQCAU8J/wEWCPkCCwVGAUAVIAILB2kURgILBEcX+QILBk8CAgFPCf8BFgj5AgsHRgFA
+        EyACCwH0Gf8B9AILBkcV+QILB08BAgFyCf8BFgj5AgsIRgFAEiACCwRvF2kCCwdHFPkCCwhPAXIJ/wEW
+        CPkCCwlGASURIAILG5MCCwlHEvkCCwhPAXIJ/wEWCPkCCwxGAUAO6QILAfASvQcaAb0CCwtHEPkCCwhP
+        AXIJ/wEWCPkCCw2nBMQFogWFAgsMaQ5GAUACCwxHD/kCCwhPAXIJ/wEWCPkCCw+nAcQLoQILAfQZ/wHz
+        AgsORw35AgsITwGXCf8BFgj5AgsRpwLECKECCwGRArQHkQGuBW8LaQILBhcPRwb5AgsITwGXCf8BFgj5
+        AgsCqBKnAsQFoQILAYsBkQiuAYsQkwILCPQT8wILAnIGTwGXCf8BFgNHBfkCCwLPFKcBxAShAgsFkQau
+        ARoEvQMaCL0CCxv/AgsEcgRPAZcJ/wEWBkcC+QILDM8CqA2nAgsBrgeRA64LaQRGAWkCCxv/AgsBlwZy
+        AU8Blwn/AZQIRwILG/QCCwGRAbQHkQKuAfQP/wILG/8CCwOXBXIBmAn/AZQIRwILEP8L9gILAbQBtQK0
+        BpEB7AeOCW8CCxv/AgsGlwJyAZgJ/wGUCEcCCwz/D/YCCwGRAbUFtAORAa4BtgW3BLYGkwILG/8CCweX
+        AXIBmAn/AZQDFwVHAgsP/wz2AgsJtQG0AbUB8g/zAgsb/wILCJcBmAn/AZQGFwJHAgsS/wn2AgsBtAS1
+        BbQB7QKODG8BaQFvAgsb/+oLBFkXOAILAv8BkwFGAeMB8gG0A18BhgH0AUYBIAFGAf8BiwFfAQQBXwFm
+        AbwC/wFvASAB4wILBEcX+QILBMgE/AHICf8BbwggAgsGWRU4AgsBrgL/ARsCRgGaAQkBhgFfAYYB9AEX
+        AekBRgH/AYsBCgFfAZEC/wEaAUYBIAG9AbsCCwZHFfkCCwbIAvwByAn/AW8IIAILB1kUOAILAWYBhgEH
+        Av8BkwFGAeMB8AGuAaYBGQEXAekBRgH/AYsBZgG8Af8B9gFvASABbwG8Aa0BXwILB0cU+QILB8gB/AHm
+        Cf8BbwggAgsJXhL7AgsBhgJmAa4BGQH/ARoCRgFvAbUB8wFGAekBRgHyAbsB8gH/AZQB6QFGAZMBtAEE
+        AQoBXwILG1MCCwjIAeYJ/wFvCCACCw9NDCwCCwMJAbUBGQP/Ab0BlAL/AUYB6QFGAfQD/wEaAZMB/wHi
+        AbQBtQIJAgsH5RReAgsIyAHmCf8BbwggAgsBFwxGCUAFIAILCb0BGgK9AUYB6QFGAZQBGgS9ARoFvQIL
+        COUTXgILCMgB5gn/AW8IIAILCBcNRgYlAgsPRgHpCyACCwrlEV4CCwjIAeYJ/wFvCCACCwkXDkYEJQIL
+        AWkSRgJAAukEIAILDOUPXgILCMgB5gn/AW8IIAILAm8KFw5GASUCCxNGAekHIAILD+UMXgILCMgB5gn/
+        AW8IIAILBuMJFwxHAgsFFgFvAY4BkwRvA0YGbwFpBW8CCxHlCl4CCwLmBsgB5gn/AW8DRgUgAgsI4woX
+        CUcCCwz/AW8CRgHzC/8CCxTlB14CCwTmBMgB5gn/AZMGRgIgAgsFbQPqBBIKRAEVA0MBEQILA7UBtAEZ
+        Ab0BbwGTBP8BbwFGAW8B9AH/ARYBbwG9Av8B8QSuAgsBoBflA14CCwfmAcgB5gn/AZMIRgILA20E6gMS
+        AxMDFAMVA0MDEQIQAgsCrgG0AbwBkwFvAZMB9AH/AbwBtAHzARYBRgFvAfQBtAHvAZQBRgFvAfQB/wG8
+        AYYCZgILEnUJUwILCOYB1gn/AZMIRgILBm0D6gQSAxMDFAMVA0MCEQILAbQBCQEaAeMBbwEaAv8BtQKu
+        Af8BFgFGAW8B/wG0AYsBuwEaAeMBRgEaAv8BtQGGAgsJ4woXCEcCCwjmAdYJ/wGTCEYCCwhtBOoDEgQT
+        AxQDFQJDAgsB8wGaAW8BkwL/AfEBtQKuAbQB/wEWAm8B/wG0AoYBtAHxAZQBRgFvAfQB/wHyAgsM4woX
+        BUcCCwjmAdYJ/wGTCEYCCwLrCW0E6gMSBBMDFAIVAgsBFgGTAb0C/wEHAq4BzwGuAbQB/wGUAW8BFgH/
+        AbQBrgGLAYYBiwEJAb0B4wFGARoB/wILAhYN4woXAkcCCwjmAdYJ/wGTAxcFRnULAUIBTQE+BwABPgMA
+        ASgDAAF0AwABNgMAAQEBAAEBBQABYAEDFgAD//8A/wD/AGQACw==
+</value>
+  </data>
+  <data name="comboBoxLanguage.Items" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEtJbWFnZUNvbWJvQm94LCBWZXJzaW9uPTEuMC40NzIxLjM1MjEx
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB9JbWFnZUNvbWJvQm94Lklt
+        YWdlQ29tYm9Cb3hJdGVtBAAAAARUZXh0CkltYWdlSW5kZXgERm9udARJdGVtAQACAggCAAAABgMAAAAH
+        RW5nbGlzaAYAAAAKCgs=
+</value>
+  </data>
+  <data name="comboBoxLanguage.Items1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEtJbWFnZUNvbWJvQm94LCBWZXJzaW9uPTEuMC40NzIxLjM1MjEx
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB9JbWFnZUNvbWJvQm94Lklt
+        YWdlQ29tYm9Cb3hJdGVtBAAAAARUZXh0CkltYWdlSW5kZXgERm9udARJdGVtAQACAggCAAAABgMAAAAG
+        RGV1dGNoAAAAAAoKCw==
+</value>
+  </data>
+  <data name="comboBoxLanguage.Items2" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEtJbWFnZUNvbWJvQm94LCBWZXJzaW9uPTEuMC40NzIxLjM1MjEx
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB9JbWFnZUNvbWJvQm94Lklt
+        YWdlQ29tYm9Cb3hJdGVtBAAAAARUZXh0CkltYWdlSW5kZXgERm9udARJdGVtAQACAggCAAAABgMAAAAI
+        SXRhbGlhbm8EAAAACgoL
+</value>
+  </data>
+  <data name="comboBoxLanguage.Items3" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEtJbWFnZUNvbWJvQm94LCBWZXJzaW9uPTEuMC40NzIxLjM1MjEx
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB9JbWFnZUNvbWJvQm94Lklt
+        YWdlQ29tYm9Cb3hJdGVtBAAAAARUZXh0CkltYWdlSW5kZXgERm9udARJdGVtAQACAggCAAAABgMAAAAN
+        UNGD0YHRgdC60LjQuQUAAAAKCgs=
+</value>
+  </data>
+  <data name="comboBoxLanguage.Items4" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEtJbWFnZUNvbWJvQm94LCBWZXJzaW9uPTEuMC40NzIxLjM1MjEx
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB9JbWFnZUNvbWJvQm94Lklt
+        YWdlQ29tYm9Cb3hJdGVtBAAAAARUZXh0CkltYWdlSW5kZXgERm9udARJdGVtAQACAggCAAAABgMAAAAG
+        UG9sc2tpBwAAAAoKCw==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+</root>

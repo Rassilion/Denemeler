@@ -1,0 +1,94 @@
+<Project DefaultTargets="Build"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  
+  <!--<PropertyGroup>
+    <Thumbprint>‎9909f558da0f92574d058c9ccba7b7ecbf03e3f0</Thumbprint>
+    <DeployUrl>http://localhost/ivanJoFoE/</DeployUrl>
+    <SupportUrl>
+      --><!-- Insert the support URL here --><!--
+    </SupportUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EntryPoint Include="ivanJo-EoF-Bot.exe"/>
+    <Dependency Include="ClassLibrary1.dll">
+      <AssemblyType>Managed</AssemblyType>
+      <DependencyType>Install</DependencyType>
+    </Dependency>
+    <Dependency Include="ClassLibrary2.dll">
+      <AssemblyType>Managed</AssemblyType>
+      <DependencyType>Install</DependencyType>
+      <Group>Secondary</Group>
+    </Dependency>
+    <Dependency Include="MyAddIn1.dll">
+      <AssemblyType>Managed</AssemblyType>
+      <DependencyType>Install</DependencyType>
+      <TargetPath>Addins\MyAddIn1.dll</TargetPath>
+    </Dependency>
+    <Dependency Include="ClassLibrary3.dll">
+      <AssemblyType>Managed</AssemblyType>
+      <DependencyType>Prerequisite</DependencyType>
+    </Dependency>
+
+    <File Include="Text1.txt">
+      <TargetPath>Text\Text1.txt</TargetPath>
+      <Group>Text</Group>
+    </File>
+    <File Include="DataFile1.xml ">
+      <TargetPath>Data\DataFile1.xml</TargetPath>
+      <IsDataFile>true</IsDataFile>
+    </File>
+
+    <IconFile Include="Resources\forge_icon.ico"/>
+    <BaseManifest Include="Properties\app.manifest"/>
+  </ItemGroup>
+
+  <Target Name="Build">
+
+    <GenerateApplicationManifest
+        AssemblyName="ivanJo-EoF-Bot.exe"
+        AssemblyVersion="1.0.0.0"
+        ConfigFile="@(ConfigFile)"
+        Dependencies="@(Dependency)"
+        Description="TestApp"
+        EntryPoint="@(EntryPoint)"
+        Files="@(File)"
+        IconFile="@(IconFile)"
+        InputManifest="@(BaseManifest)"
+        OutputManifest="ivanJo-EoF-Bot.exe.manifest">
+      <Output
+          ItemName="ApplicationManifest"
+          TaskParameter="OutputManifest"/>
+    </GenerateApplicationManifest>
+
+    <GenerateDeploymentManifest
+        AssemblyName="ivanJo-EoF-Bot.application"
+        AssemblyVersion="1.0.0.0"
+        DeploymentUrl="$(DeployToUrl)"
+        Description="TestDeploy"
+        EntryPoint="@(ApplicationManifest)"
+        Install="true"
+        OutputManifest="ivanJo-EoF-Bot.application"
+        Product="ivanJo-EoF-Bot"
+        Publisher="ivanJo"
+        SupportUrl="$(SupportUrl)"
+        UpdateEnabled="true"
+        UpdateInterval="1"
+        UpdateMode="Background"
+        UpdateUnit="weeks">
+      <Output
+          ItemName="DeployManifest"
+          TaskParameter="OutputManifest"/>
+    </GenerateDeploymentManifest>
+
+    <SignFile
+        CertificateThumbprint="$(Thumbprint)"
+        SigningTarget="@(ApplicationManifest)"/>
+
+    <SignFile
+        CertificateThumbprint="$(Thumbprint)"
+        SigningTarget="@(DeployManifest)"/>
+
+  </Target>-->
+</Project>

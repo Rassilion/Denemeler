@@ -1,0 +1,158 @@
+<!--
+***********************************************************************************************
+Obfuscation.targets
+
+This will obfuscate and optionally merge an assembly together with its dependencies.
+Will handle both stand-alone builds or a ClickOnce publish.
+
+For a ClickOnce publish that will be merging dependencies, an additional step is required.
+Because dependencies will be merged and protected as part of the main assembly, we don't
+want to allow a stand-alone, unprotected copy to be included in the Publish. Here's how
+to exclude it from the publish files:
+  1) Go to the Publish tab in My Project.
+  2) Click on Application Files...
+  3) For all dll or exe dependencies that have a Publish Status marked as 'Include' or
+     'Include (Auto)', change these to 'Exclude'.
+
+***********************************************************************************************
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="AfterCompile" Condition=" '$(Obfuscate)' == 'true' ">
+
+    <!-- Collect list and create argument for merging assemblies -->
+    <!-- Got this trick from http://www.hanselman.com/blog/MixingLanguagesInASingleAssemblyInVisualStudioSeamlesslyWithILMergeAndMSBuild.aspx -->
+    <Message Text="Calculating assemblies to merge." Condition="'$(ShouldMergeAssemblies)'=='true'" Importance="high" />
+
+    <CreateItem Include="@(ReferencePath)"
+                Condition="'%(ReferencePath.CopyLocal)'=='true' And '%(ReferencePath.ResolvedFrom)'!='{TargetFrameworkDirectory}'">
+      <Output TaskParameter="Include" ItemName="MergeAssemblies" />
+    </CreateItem>
+    <CreateProperty Value="@(MergeAssemblies->'%(FullPath)', '/')" Condition="'$(ShouldMergeAssemblies)'=='true' And '$(MergeAssembliesArgOverride)'==''">
+      <Output TaskParameter="Value" PropertyName="MergeAssembliesList" />
+    </CreateProperty>
+    <CreateProperty Value="-merge 1 -satellite_assemblies &quot;$(MergeAssembliesList)&quot;" Condition="'$(MergeAssembliesList)' != ''">
+      <Output TaskParameter="Value" PropertyName="MergeAssembliesArg" />
+    </CreateProperty>
+    <CreateProperty Value="$(MergeAssembliesArgOverride)" Condition="'$(ShouldMergeAssemblies)'=='true' And '$(MergeAssembliesArgOverride)'!=''">
+      <Output TaskParameter="Value" PropertyName="MergeAssembliesArg"/>
+    </CreateProperty>
+    <Message Text="Will use merge argument override: $(MergeAssembliesArgOverride)" Condition="'$(ShouldMergeAssemblies)'=='true' And '$(MergeAssembliesArgOverride)'!=''" Importance="high" />
+    <Message Text="Will merge the following into output:%0D%0A    @(MergeAssemblies->'%(FusionName)', '%0D%0A    ')" Condition="'$(MergeAssembliesList)'!=''" Importance="high" />
+    <Message Text="Won't merge any assemblies." Condition="'$(MergeAssembliesList)'=='' And '$(MergeAssembliesArgOverride)'==''" Importance="high" />
+
+    <!-- Set up all our other variables -->
+    <CreateProperty Value=".NET Reactor">
+      <Output TaskParameter="Value" PropertyName="ObfuscatorName" />
+    </CreateProperty>
+    <CreateProperty Value="&quot;C:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.exe&quot;">
+      <Output TaskParameter="Value" PropertyName="ObfuscatorLocation" />
+    </CreateProperty>
+    <Message Text="Will use obfuscation options overrides: $(ObfuscatorOptionsOverride)" Condition="'$(ObfuscatorOptionsOverride)'!=''" Importance="high" />
+    <CreateProperty Value="$(MergeAssembliesArg) $(ObfuscatorOptionsOverride)" Condition="'$(ObfuscatorOptionsOverride)'!=''">
+      <Output TaskParameter="Value" PropertyName="ObfuscatorOptions" />
+    </CreateProperty>
+    <CreateProperty Value="$(MergeAssembliesArg) -compression 0 -obfuscation 1 -obfuscate_public_types 1  -exclude_enums 1 -antitamp 1 -suppressildasm 1 -necrobit 1 -mapping_file 1 -resourceencryption 1 -stringencryption 1 -control_flow_obfuscation 1 -flow_level 9" Condition="'$(ObfuscatorOptionsOverride)'==''">
+      <Output TaskParameter="Value" PropertyName="ObfuscatorOptions" />
+    </CreateProperty>
+    <CreateProperty Value="$(IntermediateOutputPath)$(TargetFileName)">
+      <Output TaskParameter="Value" PropertyName="SourceExe" />
+    </CreateProperty>
+    <CreateProperty Value="$(IntermediateOutputPath)Secure\">
+      <Output TaskParameter="Value" PropertyName="SecurePath" />
+    </CreateProperty>
+    <CreateProperty Value="$(SecurePath)$(TargetFileName)">
+      <Output TaskParameter="Value" PropertyName="SecureExe" />
+    </CreateProperty>
+    <CreateProperty Value="$(IntermediateOutputPath)OrigExe\$(TargetFileName)">
+      <Output TaskParameter="Value" PropertyName="OrigExe" />
+    </CreateProperty>
+
+    <!-- Create a copy of the original EXE for comparison purposes, etc. -->
+    <MakeDir Directories="$(IntermediateOutputPath)OrigExe" Condition="!Exists('$(IntermediateOutputPath)OrigExe')" />
+    <Delete Files="$(OrigExe)" Condition="Exists('$(OrigExe)')" />
+    <Copy SourceFiles="$(SourceExe)" DestinationFiles="$(OrigExe)" />
+
+    <!-- Create obfuscated EXE -->
+    <MakeDir Directories="$(SecurePath)" Condition="!Exists('$(SecurePath)')" />
+    <Exec Command="attrib $(SecurePath)*.* -R" Condition="Exists('$(SecurePath)')" />
+    <Delete Files="$(SecureExe)" Condition="Exists('$(SecureExe)')" />
+    <Delete Files="$(SecurePath)*.nrmap" ContinueOnError="true" />
+    <Message Text="Running '$(ObfuscatorName)' with the following options: $(ObfuscatorOptions)" />
+    <Exec Command="$(ObfuscatorLocation) -file &quot;$(SourceExe)&quot; -targetfile &quot;$(SecureExe)&quot; $(ObfuscatorOptions) " Condition="'$(UseObfuscatorProject)'==''"/>
+    <Exec Command="$(ObfuscatorLocation) -project &quot;$(UseObfuscatorProject)&quot; -targetfile &quot;$(SecureExe)&quot; " Condition="'$(UseObfuscatorProject)'!=''"/>
+
+    <!-- Get map files that were created with the obfuscation. (Should be only one.) -->
+    <CreateItem Include="$(SecurePath)*.nrmap">
+      <Output TaskParameter="Include" ItemName="ObfuscationMapFiles" />
+    </CreateItem>
+
+    <!-- Replace the original EXE with the obfuscated EXE so it will be used for the publish-->
+    <Copy SourceFiles="$(SecureExe)" DestinationFiles="$(SourceExe)" />
+    <!--
+      Add the original and secured copies of the assembly to FileWrites so they can
+      be cleaned up on a Build Clean. Also add the mapping file that our obfuscation
+      tool automatically generated.
+    -->
+    <CreateItem Include="$(OrigExe)">
+      <Output TaskParameter="Include" ItemName="FileWrites" />
+    </CreateItem>
+    <CreateItem Include="$(SecureExe)">
+      <Output TaskParameter="Include" ItemName="FileWrites" />
+    </CreateItem>
+    <CreateItem Include="@(ObfuscationMapFiles)">
+      <Output TaskParameter="Include" ItemName="FileWrites" />
+    </CreateItem>
+
+  </Target>
+
+  <!--
+  ============================================================
+  _CopyFilesMarkedCopyLocal
+
+    This target normally copies references that are marked for copy into the output directory.
+    We override this target if we're merging because we would have already merged these into
+    our main assembly. This would have copied not only the referenced dlls and exes, but
+    also their xml and pdb files which also are unused after merging. (Borrowed from target in
+    'Microsoft.Common.targets' included with MSBuild 2.0. You may need to make sure it matches
+    the targets file included with your version of MSBuild.)
+  ============================================================
+  -->
+  <Target Name="_CopyFilesMarkedCopyLocal">
+
+    <!-- This is from 'Microsoft.Common.targets'. -->
+    <Copy SourceFiles="@(ReferenceCopyLocalPaths)" DestinationFiles="@(ReferenceCopyLocalPaths->'$(OutDir)%(DestinationSubDirectory)%(Filename)%(Extension)')" SkipUnchangedFiles="true" Condition="'$(Obfuscate)'!='true' Or '$(ShouldMergeAssemblies)'!='true'">
+      <Output TaskParameter="DestinationFiles" ItemName="FileWritesShareable" />
+    </Copy>
+
+    <!-- Since this target is already overriden, let's use this to copy the mapping file. -->
+    <Copy SourceFiles="@(ObfuscationMapFiles)" DestinationFiles="@(ObfuscationMapFiles->'$(OutDir)%(DestinationSubDirectory)%(Filename)%(Extension)')" SkipUnchangedFiles="true" Condition="'$(Obfuscate)'=='true'">
+      <Output TaskParameter="DestinationFiles" ItemName="FileWrites" />
+    </Copy>
+
+  </Target>
+
+  <!--
+  ============================================================
+  GenerateManifests
+
+    This adds the DoubleCheckDependencies target as an additional step in the
+    process of generating manifests. (The GenerateManifests target borrowed
+    from target in 'Microsoft.Common.targets' included with MSBuild 2.0. You
+    may need to make sure it matches the targets file included with your version 
+    of MSBuild.)
+
+  DoubleCheckDependencies
+
+    This makes sure that merged dependencies are not inadvertently
+    included in a publish when we're obfuscating.
+  ============================================================
+  -->
+  <Target Name="GenerateManifests" Condition="'$(GenerateClickOnceManifests)'=='true' Or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!=''" DependsOnTargets="GenerateApplicationManifest;GenerateDeploymentManifest;DoubleCheckDependencies" />
+  <Target Name="DoubleCheckDependencies" DependsOnTargets="GenerateApplicationManifest" Condition="'$(Obfuscate)' == 'true' And '$(ShouldMergeAssemblies)'=='true'">
+     <Error Condition="'@(_DeploymentManifestDependencies)'!='' And '%(_DeploymentManifestDependencies.DependencyType)'!='Prerequisite'" 
+            Text="Assemblies set to merge during obfuscation but ClickOnce deployment still lists output dependencies! When merging, all assemblies that can be changed must be either set to Exclude or Prerequisite." />
+  </Target>
+
+</Project>

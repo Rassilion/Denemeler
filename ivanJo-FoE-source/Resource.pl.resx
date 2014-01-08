@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_updateStatus_Bot_Scanning" xml:space="preserve">
+    <value>Bot: Skanowanie...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Scanning_production" xml:space="preserve">
+    <value>Bot: Skanowanie produkcji...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Clicking_production" xml:space="preserve">
+    <value>Bot: Klikanie produkcji...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Scanning_done" xml:space="preserve">
+    <value>Bot: Skanowanie zakończone!</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Production_scanning_done" xml:space="preserve">
+    <value>Bot: Skanowanie produkcji zakończone!</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Clicking" xml:space="preserve">
+    <value>Bot: Zbieranie...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Done_clicking" xml:space="preserve">
+    <value>Bot: Zbieranie zakończone!</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Idle" xml:space="preserve">
+    <value>Bot: bezczynny</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DonateButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\btn_donate_LG[1].gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainForm_resizeBrowser_ViewMode_Bot_friendly" xml:space="preserve">
+    <value>Widok: Przyjazny Bot</value>
+  </data>
+  <data name="MainForm_resizeBrowser_ViewMode_User_friendly" xml:space="preserve">
+    <value>Widok: Przyjazny</value>
+  </data>
+  <data name="MainForm_updateStatus_Production_scanning_done" xml:space="preserve">
+    <value>Skanowanie produkcji zakończone w {0} sek.</value>
+  </data>
+  <data name="MainForm_updateStatus_Started_clicking" xml:space="preserve">
+    <value>Klikanie rozpoczęcia produkcji...</value>
+  </data>
+  <data name="MainForm_updateStatus_Scanning_done" xml:space="preserve">
+    <value>SKanowanie zakończone w {0} sek.</value>
+  </data>
+  <data name="MainForm_updateStatus_Selected_production_type" xml:space="preserve">
+    <value>Wybieranie typu produkcji.</value>
+  </data>
+  <data name="MainForm_updateStatus_Started_clicking_production_items" xml:space="preserve">
+    <value>Rozpoczęcie zbierania produkcji...</value>
+  </data>
+  <data name="MainForm_updateStatus_Started_scanning_for_production" xml:space="preserve">
+    <value>Rozpoczęcie skanowania produkcji...</value>
+  </data>
+  <data name="MainForm_updateStatus_Started_scanning" xml:space="preserve">
+    <value>Rozpoczęcie skanowania zbiorów...</value>
+  </data>
+  <data name="MainForm_buttonChangeView_Click_You_can_only_change_the_view_mode_when_the_bot_is_idle_" xml:space="preserve">
+    <value>Widok może zostać zmieniony tylko gdy bot jest w stanie bezczynnym.</value>
+  </data>
+  <data name="MainForm_buttonSavePicture_Click_Picture_saved" xml:space="preserve">
+    <value>'userPicture.png' zapisany.</value>
+  </data>
+  <data name="MainForm_closePopup_Error_Popup_still_there_after_close_click" xml:space="preserve">
+    <value>Błąd: Okno cały czas otwarte.</value>
+  </data>
+  <data name="MainForm_closePopup_Error_Game_window_not_recognized" xml:space="preserve">
+    <value>Błąd: Nie rozpoznaje okna gry</value>
+  </data>
+  <data name="MainForm_closePopup_Error_Blue_Screen_Of_Death" xml:space="preserve">
+    <value>Błąd: Blue Screen Of Death</value>
+  </data>
+  <data name="MainForm_OnFormClosing_Stopping_running_BOT_thread" xml:space="preserve">
+    <value>Zatrzymanie działania bota...</value>
+  </data>
+  <data name="MainForm_OnFormClosing_BOT_thread_stopped" xml:space="preserve">
+    <value>BOT zatrzymany...</value>
+  </data>
+  <data name="MainForm_OnLoad_Bot_loaded_succesfully" xml:space="preserve">
+    <value>BOT załadowany</value>
+  </data>
+  <data name="MainForm_resizeBrowser_Entered_user_friendly_view_mode" xml:space="preserve">
+    <value>Wejście w przyjazny tryb wyświetlania urzytkownika</value>
+  </data>
+  <data name="MainForm_resizeBrowser_Entered_bot_friendly_view_mode" xml:space="preserve">
+    <value>Wejście w przyjazny tryb wyświetlania bota</value>
+  </data>
+  <data name="MainForm_saveScanResultToFile_Saving_scan_results_to_file" xml:space="preserve">
+    <value>Zapisanie rezultatu skanowania do pliku: {0}</value>
+  </data>
+  <data name="MainForm_updateStatus_Item_X_found" xml:space="preserve">
+    <value>Znaleziono #{0} budynków</value>
+  </data>
+  <data name="MainForm_updateStatus_Plunged_item_X_found" xml:space="preserve">
+    <value>Znaleziono #{0} splądrowanych budynków</value>
+  </data>
+  <data name="MainForm_updateStatus_Production_item_X_found" xml:space="preserve">
+    <value>Znaleziono #{0} produkcji</value>
+  </data>
+  <data name="MainForm_updateStatus_Selected_production_item_X" xml:space="preserve">
+    <value>Wybieranie produkcji #{0}</value>
+  </data>
+  <data name="MainForm_updateStatus_Clicked_item_X" xml:space="preserve">
+    <value>Kliknięcie budynku #{0}</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Idle_for_X_min" xml:space="preserve">
+    <value>Ochrona: Zatrzymanie bota w przybliżeniu. {0} min.</value>
+  </data>
+  <data name="MainForm_botStart_Pause_Timer" xml:space="preserve">
+    <value>Zatrzymanie czasu</value>
+  </data>
+  <data name="MainForm_buttonStartBot_Resume_Timer" xml:space="preserve">
+    <value>Wznowienie czasu</value>
+  </data>
+  <data name="MainForm_buttonStartBot_Restart_Bot" xml:space="preserve">
+    <value>Restart Bota</value>
+  </data>
+  <data name="panelBckgr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\06_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainForm_updateStatus_RottedSupply_item_X_found" xml:space="preserve">
+    <value>Znaleziono #{0} zniszczonych produktów</value>
+  </data>
+  <data name="MainForm_updateStatus_Trying_to_zoom_in" xml:space="preserve">
+    <value>Próba porzybliżenia...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Zooming" xml:space="preserve">
+    <value>Bot: Przybliżenie obrazu...</value>
+  </data>
+  <data name="MainForm_updateStatus_Check_for_zoom" xml:space="preserve">
+    <value>Sprawdzenie czy obraz jest powiększony...</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Paused" xml:space="preserve">
+    <value>Bot: Zatrzymany na {0} sekund.</value>
+  </data>
+  <data name="MainForm_updateStatus_Bot_Paused_for_X_min" xml:space="preserve">
+    <value>Zatrzymanie bota na {0} seconds ponieważ użytkownik wykonuje akcję.</value>
+  </data>
+  <data name="MainForm_buttonStartBot_Running" xml:space="preserve">
+    <value>Uruchomiony...</value>
+  </data>
+  <data name="MainForm_buttonAutoReload_Auto_reload_ON">
+    <value xml:space="preserve">Auto odświerzanie: ON</value>
+  </data>
+  <data name="MainForm_buttonAutoReload_Auto_reload_OFF">
+    <value xml:space="preserve">Auto odświerzanie: OFF</value>
+  </data>
+  <data name="MainForm_BotDoActionsThreaded_BotIdleBeforeProduction">
+    <value xml:space="preserve">Czekaj {0} sekund...</value>
+  </data>
+  <data name="MainForm_BotDoActionsThreaded_RestartApplication">
+    <value xml:space="preserve">Próba wskrzeszenia po śmierci...</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_Error_PopupRemained_SelectingSupplies">
+    <value xml:space="preserve">Błąd: Nie można wybrać. Wyboru materiałów!</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_Error_PopupRemained_SelectingGoods">
+    <value xml:space="preserve">Błąd: Nie można wybrać. Być może nie masz wystarczająco złota bądz narzędzi by wyprodukować materiały!</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_Error_PopupRemained_SelectingMilitary">
+    <value xml:space="preserve">Błąd: Nie można wybrać. Być może nie masz wystarczająco złota bądz narzędzi by wyprodukować jednostkę!</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_MilitaryClick_Disabled">
+    <value xml:space="preserve">Automatyczna budowa wojska wyłączona, zamykanie okna...</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_GoodsClick_Disabled">
+    <value xml:space="preserve">Automatyczne wybieranie materiałów wyłączone, zamykanie okna...</value>
+  </data>
+  <data name="MainForm_DoSupplyClicks_NonProductionBuilding">
+    <value xml:space="preserve">#{0} nie są budynkami produkcyjnymi.</value>
+  </data>
+  <data name="MainForm_ClickMilitaryItems_MilitaryItemSelected">
+    <value xml:space="preserve">Wybór jednostek militarnych #{0}</value>
+  </data>
+  <data name="MainForm_SaveScanResultToFile_ScanResultsSaved">
+    <value><![CDATA[Scan results saved to "{0}".]]></value>
+  </data>
+  <data name="MainForm_OnAddressChanged_PageLoaded">
+    <value xml:space="preserve">Strona została załadowana.</value>
+  </data>
+  <data name="MainForm_AwesomiumCrashed">
+    <value xml:space="preserve">Awesomium CRASHED! Status: {0}</value>
+  </data>
+  <data name="MainForm_DoCollectClicks_Stealth_ClickingFirstXItems">
+    <value xml:space="preserve">Ochrona: Kliknięcie najpierw {0} domków jeśli jakieś zostały znalezione.</value>
+  </data>
+  <data name="MainForm_AutoLogin_LoadingLastUsedWorld">
+    <value xml:space="preserve">Próba wgrania ostatnio używanego świata...</value>
+  </data>
+  <data name="MainForm_AutoLogin_PageLoadTooSlow">
+    <value xml:space="preserve">Jeśli strona domowa ładuje się dłużej niż {0} sekund. Anulowanie auto logowania.</value>
+  </data>
+  <data name="MainForm_AutoLogin_WaitPageToCompleteLoading">
+    <value xml:space="preserve">Poczekaj chwilę zanim strona się załąduje...</value>
+  </data>
+  <data name="MainForm_AutoLogin_PageNotReady">
+    <value xml:space="preserve">Dokument nie jest gotowy. Anulowanie automatycznego logowania.</value>
+  </data>
+  <data name="MainForm_AutoRefreshTick_Reload">
+    <value xml:space="preserve">Automatyczne przekierowanie odświerzania></value>
+  </data>
+</root>
